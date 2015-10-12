@@ -40,36 +40,46 @@
       <section layout="column" layout-margin>
 
         <div layout="column">
-          <md-card>
+          <md-card class="util-card">
             <md-toolbar>
               <div class="md-toolbar-tools">
                 <h3>Zip Code</h3>
               </div>
             </md-toolbar>
-            <md-card-content layout="row" layout-margin>
-              <md-content flex>
-                <div>
-                  <md-input-container>
-                    <label>Zip Code</label>
-                    <input ng-model="zipCode" zip-code>
-                  </md-input-container>
-                </div>
-                <pre>{{zipCode}}</pre>
+            <md-card-content layout="column" layout-margin>
+              <md-content>
+                <p>A simple input field which only allows 5 or 9 digit zip codes.</p>
+                <small>This directive prevents non-numerical characters from being entered, and all other values are marked as invalid. The input is automatically formatted to display a dash after more than 5 digits are entered.</small>
               </md-content>
-              <md-card flex>
-                <md-tabs md-border-bottom class="md-accent">
-                  <md-tab label="HTML">
-                    <md-tab-content>
-                      <cda-code-block lang="html">
-&lt;md-input-container&gt;
-  &lt;label&gt;Zip Code&lt;label&gt;
-  &lt;input ng-model="zipCode" zip-code&gt;
-&lt;/md-input-container&gt;
-                      </cda-code-block>
-                    </md-tab-content>
-                  </md-tab>
-                </md-tabs>
-              </md-card>
+              <md-content layout="row">
+                <md-content flex class="directive-content">
+                  <section>
+                    <md-subheader class="md-primary">Input</md-subheader>
+                    <md-input-container>
+                      <label>Zip Code</label>
+                      <input ng-model="zipCode" zip-code>
+                    </md-input-container>
+                  </section>
+                  <section>
+                    <md-subheader class="md-primary">Model</md-subheader>
+                    <pre ng-bind="zipCode"></pre>
+                  </section>
+                </md-content>
+                <md-card flex>
+                  <md-tabs md-border-bottom class="md-accent">
+                    <md-tab label="HTML">
+                      <md-tab-content>
+                        <cda-code-block lang="html">
+  &lt;md-input-container&gt;
+    &lt;label&gt;Zip Code&lt;/label&gt;
+    &lt;input zip-code ng-model=&quot;zipCode&quot;&gt;
+  &lt;/md-input-container&gt;
+                        </cda-code-block>
+                      </md-tab-content>
+                    </md-tab>
+                  </md-tabs>
+                </md-card>
+              </md-content>
             </md-card-content>
           </md-card>
         </div>

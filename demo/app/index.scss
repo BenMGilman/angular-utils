@@ -69,11 +69,33 @@ header {
   width: 100%;
 }
 
+:not(md-tab-content) > pre {
+  background: rgba(0, 0, 0, 0.067);
+  font-size: 1.25em;
+  padding: 6px 0 6px 6px;
+  min-height: 17px;
+}
 md-tab-content pre.hljs {
   margin-top: -0.5em;
   margin-bottom: 0;
   padding-bottom: 0;
   height: 100%;
+}
+
+.directive-content {
+  .md-subheader-inner {
+    padding: 9px 0 0;
+  }
+}
+
+.util-card md-card-content {
+  > md-content:first-child {
+    margin-bottom: 10px;
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 /**
