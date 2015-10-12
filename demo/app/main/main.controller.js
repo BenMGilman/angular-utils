@@ -5,12 +5,7 @@
     .module('angularUtils')
     .controller('MainController', MainController);
 
-  /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController() {
     var vm = this;
-
-    activate();
-
-    function activate() { }
   }
 })();

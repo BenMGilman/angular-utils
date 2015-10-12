@@ -69,6 +69,13 @@ header {
   width: 100%;
 }
 
+md-tab-content pre.hljs {
+  margin-top: -0.5em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

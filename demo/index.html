@@ -40,34 +40,38 @@
       <section layout="column" layout-margin>
 
         <div layout="column">
-          <md-toolbar>
-            <div class="md-toolbar-tools">
-              <h3>Zip Code</h3>
-            </div>
-          </md-toolbar>
-          <md-content layout="row" layout-margin>
-            <md-card flex class="md-padding">
-              <md-content>
-                <md-input-container flex>
-                  <label>Zip Code</label>
-                  <input ng-model="zipCode" zip-code>
-                </md-input-container>
+          <md-card>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <h3>Zip Code</h3>
+              </div>
+            </md-toolbar>
+            <md-card-content layout="row" layout-margin>
+              <md-content flex>
+                <div>
+                  <md-input-container>
+                    <label>Zip Code</label>
+                    <input ng-model="zipCode" zip-code>
+                  </md-input-container>
+                </div>
                 <pre>{{zipCode}}</pre>
               </md-content>
-            </md-card>
-            <md-tabs flex md-border-bottom>
-              <md-tab label="HTML">
-                <md-tab-content layout-padding>
-                  HTML
-                </md-tab-content>
-              </md-tab>
-              <md-tab label="JS">
-                <md-tab-content layout-padding>
-                  JS
-                </md-tab-content>
-              </md-tab>
-            </md-tabs>
-          </md-content>
+              <md-card flex>
+                <md-tabs md-border-bottom class="md-accent">
+                  <md-tab label="HTML">
+                    <md-tab-content>
+                      <cda-code-block lang="html">
+&lt;md-input-container&gt;
+  &lt;label&gt;Zip Code&lt;label&gt;
+  &lt;input ng-model="zipCode" zip-code&gt;
+&lt;/md-input-container&gt;
+                      </cda-code-block>
+                    </md-tab-content>
+                  </md-tab>
+                </md-tabs>
+              </md-card>
+            </md-card-content>
+          </md-card>
         </div>
 
       </section>
